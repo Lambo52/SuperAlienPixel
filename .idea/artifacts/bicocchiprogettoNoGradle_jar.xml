@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bicocchiprogettoNoGradle:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bicocchiprogettoNoGradle_jar</output-path>
+    <root id="archive" name="bicocchiprogettoNoGradle.jar">
+      <element id="module-output" name="bicocchiprogettoNoGradle" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/sqlite-jdbc-3.40.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
