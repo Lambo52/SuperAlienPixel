@@ -42,11 +42,35 @@ public class tileManager {
     }
 
     public void getTileImage() { //METODO CHIAMATO DAL COSTRUTTORE DI tileManager, qui si caricano le tipologie di tail
-        //caricamento grass
-        loadTile(0, "grass", false);
+        //caricamento nothing
+        loadTile(0, "0nothing", false);
 
         //caricamento wall
-        loadTile(1, "wall", true);
+        loadTile(1, "1wall", true);
+
+        //caricamento grass
+        loadTile(2, "2grass", true);
+
+        //caricamento heart
+        loadTile(3, "3heart", true);
+
+        //caricamento grasstopright
+        loadTile(4, "4grasstopright", true);
+
+        //caricamento grasstopleft
+        loadTile(5, "5grasstopleft", true);
+
+        //caricamento heartright
+        loadTile(6, "6heartright", true);
+
+        //caricamento heartleft
+        loadTile(7, "7heartleft", true);
+
+        //caricamento hearttopright
+        loadTile(8, "8hearttopright", true);
+
+        //caricamento hearttopleft
+        loadTile(9, "9hearttopleft", true);
     }
 
     public void loadTile(int index, String name, boolean collision) {
