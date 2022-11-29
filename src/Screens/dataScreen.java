@@ -13,7 +13,7 @@ public class dataScreen extends Screens{
     String title;
     String start = "START";
     String exit = "BACK";
-    String reset = "CANCELLA SALVATAGGIO";
+    String reset = "RESET SAVE";
 
     public dataScreen(gamePanel gp) {
         super(gp);
@@ -23,7 +23,8 @@ public class dataScreen extends Screens{
     public void loadButtons() {
         buttons.add(new menuButton(gp,gp.getScreenHeight() - (int) (gp.getTileSize() * 3),(int) (gp.getTileSize() * 2.5)));
         buttons.add(new menuButton(gp,gp.getScreenHeight() - (int) (gp.getTileSize() * 2.5),(int) (gp.getTileSize() * 2.5)));
-        buttons.add(new menuButton(gp,gp.getScreenHeight() - (int) (gp.getTileSize() * 2), (int) (gp.getTileSize() * 6)));
+        buttons.add(new menuButton(gp,gp.getScreenHeight() - (int) (gp.getTileSize() * 2),
+                (int) (gp.getTileSize() * 3)));
     }
     public void update() {
         //vi devo dire, ti devo dire
@@ -118,9 +119,9 @@ public class dataScreen extends Screens{
 
         g2.drawString(reset, gp.getScreenWidth() / 2 - length / 2 , gp.getScreenHeight() - (int)(gp.getTileSize() * 1.5));
 
-        /*for(int i = 0; i < buttons.size(); i++) {
+        for(int i = 0; i < buttons.size(); i++) {
             buttons.get(i).draw(g2);
-        }*/
+        }
     }
 
     @Override
