@@ -119,9 +119,9 @@ public class dataScreen extends Screens{
 
         g2.drawString(reset, gp.getScreenWidth() / 2 - length / 2 , gp.getScreenHeight() - (int)(gp.getTileSize() * 1.5));
 
-        for(int i = 0; i < buttons.size(); i++) {
+        /*for(int i = 0; i < buttons.size(); i++) {
             buttons.get(i).draw(g2);
-        }
+        }*/
     }
 
     @Override
