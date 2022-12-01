@@ -52,7 +52,7 @@ public class tileManager {
         loadTile(2, "2grass", true);
 
         //caricamento heart
-        loadTile(3, "3heart", true);
+        loadTile(3, "3earth", true);
 
         //caricamento grasstopright
         loadTile(4, "4grasstopright", true);
@@ -60,17 +60,17 @@ public class tileManager {
         //caricamento grasstopleft
         loadTile(5, "5grasstopleft", true);
 
-        //caricamento heartright
-        loadTile(6, "6heartright", true);
+        //caricamento earthright
+        loadTile(6, "6earthright", true);
 
-        //caricamento heartleft
-        loadTile(7, "7heartleft", true);
+        //caricamento earthleft
+        loadTile(7, "7earthleft", true);
 
-        //caricamento hearttopright
-        loadTile(8, "8hearttopright", true);
+        //caricamento earthtopright
+        loadTile(8, "8earthtopright", true);
 
-        //caricamento hearttopleft
-        loadTile(9, "9hearttopleft", true);
+        //caricamento earthtopleft
+        loadTile(9, "9earthtopleft", true);
     }
 
     public void loadTile(int index, String name, boolean collision) {
