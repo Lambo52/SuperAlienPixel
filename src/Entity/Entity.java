@@ -25,8 +25,8 @@ public abstract class Entity {
     boolean collisionLeft = false;
     boolean collisionRight = false;
     boolean collisionBottom = false;
-    boolean falling  = true; // GRAVITà MOSCONI
-    boolean jumping = false; //salto MOSCONI
+    boolean falling  = true;
+    boolean jumping = false;
     double gravitySpeed = 0.3; //gravità
     final double MAX_GRAVITY_SPEED = 10;
     double velY = 0;

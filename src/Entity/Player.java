@@ -14,7 +14,7 @@ public class Player extends Entity{
     int bulletsBlocker;
     int Immunity;
 
-    public Player(gamePanel gp, keyHandler Key) { //costruttore
+    public Player(gamePanel gp, keyHandler Key) {
 
         super(gp);
         this.Key = Key;
