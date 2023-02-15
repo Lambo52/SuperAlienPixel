@@ -27,10 +27,6 @@ public class finishScreen extends Screens {
         buttons.add(new menuButton(gp,gp.getScreenHeight() - (int)(gp.getTileSize() * 2),(int) (gp.getTileSize() * 2.5)));
     }
 
-    public void update() {
-        //niente
-    }
-
     public void draw(Graphics2D g2) {
         //int length = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
         //int x = gp.screenWidth / 4 - length / 2;
@@ -191,16 +187,6 @@ public class finishScreen extends Screens {
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {
-        super.mousePressed(e);
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-        super.mouseReleased(e);
-    }
-
-    @Override
     public void mouseEntered(MouseEvent e) {
 
     }
@@ -213,10 +199,5 @@ public class finishScreen extends Screens {
     @Override
     public void mouseDragged(MouseEvent e) {
 
-    }
-
-    @Override
-    public void mouseMoved(MouseEvent e) {
-        super.mouseMoved(e);
     }
 }

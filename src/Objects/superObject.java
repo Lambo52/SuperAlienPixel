@@ -8,16 +8,16 @@ import java.awt.image.BufferedImage;
 
 public abstract class superObject { //servirà per quando aggiungerò le monete mi raccomando non cancellarlo a caso
     // solo perché sembra inutile per fare le entity
-    public gamePanel gp;
-    public BufferedImage image;
-    public boolean collision = false;
-    public String name;
-    public int worldX, worldY;
-    public int screenX, screenY;
-    public Rectangle solidArea;
-    public int solidAreaDefaultX = 0;
-    public int solidAreaDefaultY = 0;
-    public tilesOptimizer tileScaled;
+    gamePanel gp;
+    BufferedImage image;
+    boolean collision = false;
+    String name;
+    int worldX, worldY;
+    int screenX, screenY;
+    Rectangle solidArea;
+    int solidAreaDefaultX = 0;
+    int solidAreaDefaultY = 0;
+    tilesOptimizer tileScaled;
     public static String coin = "coin";
     public static String door = "door";
 

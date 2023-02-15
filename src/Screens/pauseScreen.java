@@ -146,17 +146,6 @@ public class pauseScreen extends Screens{
     public void mouseClicked(MouseEvent e) {
 
     }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-        super.mousePressed(e);
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-        super.mouseReleased(e);
-    }
-
     @Override
     public void mouseEntered(MouseEvent e) {
 
@@ -171,10 +160,4 @@ public class pauseScreen extends Screens{
     public void mouseDragged(MouseEvent e) {
 
     }
-
-    @Override
-    public void mouseMoved(MouseEvent e) {
-            super.mouseMoved(e);
-    }
-
 }

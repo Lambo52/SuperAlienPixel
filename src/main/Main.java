@@ -32,7 +32,7 @@ public class Main {
 
         gamePanel Panel = new gamePanel();
         window.add(Panel); //aggiunge il panel alla finestra
-        window.pack(); // incrementa le performances
+        window.pack();
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 

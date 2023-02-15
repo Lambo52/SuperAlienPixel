@@ -28,7 +28,7 @@ public class Monster extends Entity{
     }
 
 
-    public void getMonsterImage() { //qui prendiamo l'immagine del player
+    public void getMonsterImage() { //qui prendiamo l'immagine del mostro
 
         left1 = loadImage("/Enemies/monster_left1");
         left2 = loadImage("/Enemies/monster_left2");

@@ -7,7 +7,7 @@ public class tilesOptimizer {
     public tilesOptimizer() {
     }
 
-    public BufferedImage scaleImage(BufferedImage image, int width, int height) {
+    public BufferedImage scaleImage(BufferedImage image, int width, int height) {//prendiamo un'immagine e la scaliamo
 
         BufferedImage scaledImage = new BufferedImage(width, height, image.getType());
         Graphics2D g2 = scaledImage.createGraphics();

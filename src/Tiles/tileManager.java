@@ -13,8 +13,8 @@ import java.io.InputStreamReader;
 public class tileManager {
 
     gamePanel gp;
-    public Tile[] tileArray;
-    public int[][] mapTileNum; //pubblico perché si usa nelle collisioni
+    Tile[] tileArray;
+    int[][] mapTileNum;
     int worldCol, worldRow;
     int tileNum;
     int worldX, worldY, screenX, screenY;

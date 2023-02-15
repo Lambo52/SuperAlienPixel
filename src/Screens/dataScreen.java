@@ -26,9 +26,7 @@ public class dataScreen extends Screens{
         buttons.add(new menuButton(gp,gp.getScreenHeight() - (int) (gp.getTileSize() * 2),
                 (int) (gp.getTileSize() * 3)));
     }
-    public void update() {
-        //vi devo dire, ti devo dire
-    }
+
     public void draw(Graphics2D g2) {
         //g2.setColor(Color.black);
         gp.getBg().drawSingleBg(g2);
@@ -158,16 +156,6 @@ public class dataScreen extends Screens{
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {
-        super.mousePressed(e);
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-        super.mouseReleased(e);
-    }
-
-    @Override
     public void mouseEntered(MouseEvent e) {
 
     }
@@ -180,10 +168,5 @@ public class dataScreen extends Screens{
     @Override
     public void mouseDragged(MouseEvent e) {
 
-    }
-
-    @Override
-    public void mouseMoved(MouseEvent e) {
-        super.mouseMoved(e);
     }
 }

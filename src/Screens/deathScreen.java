@@ -24,10 +24,6 @@ public class deathScreen extends Screens {
         buttons.add(new menuButton(gp,gp.getScreenHeight() - (int) (gp.getTileSize() * 2.5), (int) (gp.getTileSize() * 2.5)));
         buttons.add(new menuButton(gp,gp.getScreenHeight() - (int) (gp.getTileSize() * 2), (int) (gp.getTileSize() * 2.5)));
     }
-    public void update() {
-
-    }
-
     public void draw(Graphics2D g2) { //UI
 
         //g2.setColor(Color.black);
@@ -124,16 +120,6 @@ public class deathScreen extends Screens {
     }
 
     @Override
-    public void mousePressed(MouseEvent e) {
-        super.mousePressed(e);
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-        super.mouseReleased(e);
-    }
-
-    @Override
     public void mouseEntered(MouseEvent e) {
 
     }
@@ -148,8 +134,4 @@ public class deathScreen extends Screens {
 
     }
 
-    @Override
-    public void mouseMoved(MouseEvent e) {
-        super.mouseMoved(e);
-    }
 }

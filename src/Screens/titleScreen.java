@@ -57,7 +57,7 @@ public class titleScreen extends Screens{
         g2.setColor(Color.white);
         g2.drawString(Title, gp.getScreenWidth() / 2 - length / 2, gp.getScreenHeight() / 2 - gp.getTileSize());
 
-        //BOTTONISTICI
+        //BOTTONI
         if(buttons.get(0).isButtonPressed()) {
             gp.setUser("user1");
             gp.loadMapByUser();
@@ -185,15 +185,8 @@ public class titleScreen extends Screens{
     public void keyReleased(KeyEvent e) {
 
     }
-
     public void mouseClicked(MouseEvent e) {
 
-    }
-    public void mousePressed(MouseEvent e) {
-        super.mousePressed(e);
-    }
-    public void mouseReleased(MouseEvent e) {
-        super.mouseReleased(e);
     }
     public void mouseEntered(MouseEvent e) {
     }
@@ -201,10 +194,6 @@ public class titleScreen extends Screens{
     }
     public void mouseDragged(MouseEvent e) {
     }
-    public void mouseMoved(MouseEvent e) {
-        super.mouseMoved(e);
-    }
-
     public String getNewGame1() {
         return newGame1;
     }

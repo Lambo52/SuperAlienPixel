@@ -19,8 +19,8 @@ public abstract class Screens {
     Font Font_50;
     int length;
     int commandNum = 0;
-    public BasicStroke Border = new BasicStroke(5);
-    public int mouseX, mouseY;
+    BasicStroke Border = new BasicStroke(5);
+    int mouseX, mouseY;
     ArrayList<menuButton> buttons;
 
     public Screens(gamePanel gp) {

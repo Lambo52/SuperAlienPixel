@@ -30,13 +30,13 @@ public class Door extends superObject{
         }
     }
 
-    @Override
+    /*@Override
     public void update() {
         super.update();
-    }
+    }*/
 
-    @Override
+    /*@Override
     public void draw(Graphics2D g2) {
         super.draw(g2);
-    }
+    }*/
 }

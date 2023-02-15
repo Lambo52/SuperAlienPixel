@@ -12,30 +12,30 @@ public abstract class Entity {
 
     gamePanel gp;
     BufferedImage image = null;
-    public int worldX, worldY, screenX, screenY;
-    public int speed;
-    public BufferedImage left1, left2, right1, right2;
-    public String direction;
+    int worldX, worldY, screenX, screenY;
+    int speed;
+    BufferedImage left1, left2, right1, right2;
+    String direction;
     public static String left = "left";
     public static String right = "right";
-    public int spriteCounter = 0;
-    public int spriteNum = 1;
-    public Rectangle solidArea; //è il rettangolo delle collisioni
-    public boolean collisionTop = false;
-    public boolean collisionLeft = false;
-    public boolean collisionRight = false;
-    public boolean collisionBottom = false;
-    public boolean falling  = true; // GRAVITà MOSCONI
-    public boolean jumping = false; //salto MOSCONI
-    public double gravitySpeed = 0.3; //gravità
-    public final double MAX_GRAVITY_SPEED = 10;
-    public double velY = 0;
-    public double velX = 0;
-    public int actionCounter = 0;
-    public int solidAreaDefaultX, solidAreaDefaultY;
-    public int Life;
-    public int maxLife;
-    public boolean alive;
+    int spriteCounter = 0;
+    int spriteNum = 1;
+    Rectangle solidArea; //è il rettangolo delle collisioni
+    boolean collisionTop = false;
+    boolean collisionLeft = false;
+    boolean collisionRight = false;
+    boolean collisionBottom = false;
+    boolean falling  = true; // GRAVITà MOSCONI
+    boolean jumping = false; //salto MOSCONI
+    double gravitySpeed = 0.3; //gravità
+    final double MAX_GRAVITY_SPEED = 10;
+    double velY = 0;
+    double velX = 0;
+    int actionCounter = 0;
+    int solidAreaDefaultX, solidAreaDefaultY;
+    int Life;
+    int maxLife;
+    boolean alive;
 
     public Entity(gamePanel gp) {
         this.gp = gp;
@@ -93,7 +93,7 @@ public abstract class Entity {
             collisionLeft = false;
             gp.getCollision().checkLeft(this);
             gp.getCollision().checkObj(this, false);
-            gp.collision.checkEntity(this,gp.Monsters);
+            gp.getCollision().checkEntity(this,gp.getMonsters());
             if (collisionLeft == false) {
                 velX = -speed;
             }
@@ -106,7 +106,7 @@ public abstract class Entity {
             collisionRight = false;
             gp.getCollision().checkRight(this);
             gp.getCollision().checkObj(this, false);
-            gp.collision.checkEntity(this,gp.Monsters);
+            gp.getCollision().checkEntity(this,gp.getMonsters());
             if (collisionRight == false) {
                 velX = speed;
             }

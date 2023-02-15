@@ -9,10 +9,10 @@ import java.awt.*;
 public class Player extends Entity{
 
     keyHandler Key;
-    public int numCoin;
-    public int counterBullets;
-    public int bulletsBlocker;
-    public int Immunity;
+    int numCoin;
+    int counterBullets;
+    int bulletsBlocker;
+    int Immunity;
 
     public Player(gamePanel gp, keyHandler Key) { //costruttore
 
@@ -51,7 +51,7 @@ public class Player extends Entity{
             // astratta
             worldY = gp.getTileSize() * 12;
         }
-        speed = 5; //MODIFICATO MOSCONI
+        speed = 5;
         direction = right; //di default dobbiamo impostare una direzione se no non sa che immagine caricare delle
         // tante
         falling = true;
@@ -93,7 +93,7 @@ public class Player extends Entity{
             velY = 1;
         }
 
-        //MODIFICATO NUOVO TUTORIAL che fa schifo perché non si capisce un cazzo
+        //MODIFICATO NUOVO TUTORIAL che fa schifo perché non si capisce niente
         if (jumping && !falling) { //CI ENTRIAMO SOLO NEL MOMENTO IN CUI PREMIAMO JUMP, DOPO LA
             // GRAVITà FA IL RESTO
             collisionTop = false;
@@ -150,7 +150,7 @@ public class Player extends Entity{
                 }
             }
             //collisioni checker
-            if (!falling) { //SE NEL SALTO NON VOGLIAMO LE SPRITES ALTRO TOCCO DI CLASSE
+            if (!falling) { //SE NEL SALTO NON VOGLIAMO LE SPRITES CHE CAMBIANO
                 spriteCounter++; //ogni frame incrementiamo spriteCounter così se arriva a 12 cambiamo sprite
                 if (spriteCounter > 12) {
                     if (spriteNum == 1) {

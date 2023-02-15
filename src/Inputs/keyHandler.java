@@ -7,8 +7,7 @@ import java.awt.event.KeyListener;
 
 public class keyHandler implements KeyListener { //in questa classe mettiamo true o false i vari tasti
 
-    public boolean leftPressed = false, rightPressed = false, spacePressed = false, fPressed = false; //gran lavoro
-    // del lambiere
+    boolean leftPressed = false, rightPressed = false, spacePressed = false, fPressed = false;
     gamePanel gp;
 
     public keyHandler(gamePanel gp) {

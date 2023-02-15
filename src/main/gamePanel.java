@@ -20,20 +20,20 @@ import static main.Main.window;
 
 public class gamePanel extends JPanel implements Runnable{
 
-    final int originalTileSize = 16; //ogni personaggio/mattone è fatto da 16x16 //MODIFICATO PER MOSCONI
-    final int scale = 4; //la scala è per 3 quindi 16*3=48 MODIFICATO PER MOSCONI
-    public final  int tileSize = originalTileSize * scale; //48*48
-    public final int maxScreenCol = 16;// quindi è un quattro terzi
-    public final int maxScreenRow = 9;
-    public final int screenWidth = /*1400;*/tileSize * maxScreenCol; //larghezza dello schermo 768 pixel //MODIFICATO
-    public final int screenHeight = /*600;//*/tileSize * maxScreenRow; //altezza dello schermo 576 pixel
+    final int originalTileSize = 16; //ogni personaggio/mattone è fatto da 16x16 //MODIFICATO
+    final int scale = 4; //la scala è per 3 quindi 16*3=48 MODIFICATO
+    final  int tileSize = originalTileSize * scale; //48*48
+    final int maxScreenCol = 16;// quindi è un quattro terzi
+    final int maxScreenRow = 9;
+    final int screenWidth = /*1400;*/tileSize * maxScreenCol; //larghezza dello schermo 768 pixel //MODIFICATO
+    final int screenHeight = /*600;//*/tileSize * maxScreenRow; //altezza dello schermo 576 pixel
 
     //IMPOSTAZIONI DEL MONDO
-    public final int maxWorldCol = 50;
-    public final int maxWorldRow = 20;
+    final int maxWorldCol = 50;
+    final int maxWorldRow = 20;
 
-    public final int worldWidth = tileSize * maxWorldCol;
-    public final int worldHeight = tileSize * maxWorldRow;
+    final int worldWidth = tileSize * maxWorldCol;
+    final int worldHeight = tileSize * maxWorldRow;
     double drawInterval;
     double delta;
     long lastTime;
@@ -43,45 +43,45 @@ public class gamePanel extends JPanel implements Runnable{
     BufferedImage tempScreen; //è l'immagine su cui inizialmente andiamo a disegnare tutto
     Graphics2D g2;
 
-    public int screenWidthTrue = screenWidth; //queste variabili le settiamo nel setfullscreen
-    public int screenHeightTrue = screenHeight;
+    int screenWidthTrue = screenWidth; //queste variabili le settiamo nel setfullscreen
+    int screenHeightTrue = screenHeight;
 
-    public int commandNum = 0;
+    int commandNum = 0;
     //FPS
     int FPS = 60;
 
     //PARTE IMPORTANTE PARTICOLARE INIZIALIZZIAMO IL KEY, TILE, E PLAYER----------------------------------
-    public tileManager Tile = new tileManager(this); //inizializziamo il tilemanager per caricare la mappa, per poi
+    tileManager Tile = new tileManager(this); //inizializziamo il tilemanager per caricare la mappa, per poi
     // chiamare il metodo draw di tileManager
     keyHandler Key = new keyHandler(this); // key è il listener della classe keyHandler
     mouseInputs mouseListener = new mouseInputs(this);
     Thread gameThread; //gameThread è il thread principale per il game loop
     boolean running = false; //serve per non far ripartire la thread
-    public Player player = new Player(this,Key); //creiamo un player grazie alla classe Player e ci passiamo per
+    Player player = new Player(this,Key); //creiamo un player grazie alla classe Player e ci passiamo per
     // parametri
     // questo gamepanel e la Key creata in questa classe ma che fa riferimento alla classe keyHandler
-    public collisionChecker collision = new collisionChecker(this); //al collisionchecker bisogna passare questo gp,
+    collisionChecker collision = new collisionChecker(this); //al collisionchecker bisogna passare questo gp,
     // poi le varie entità potranno usarlo chiamando questo metodo direttamente da qui, e passandogli la loro entità
     // in modo da rendere questa classe universale
-    public superObject obj[] = new superObject[10];
-    public Entity Monsters[] = new Entity[10];
-    public objectSetter oSetter = new objectSetter(this);
-    public titleScreen Title = new titleScreen(this);
-    public pauseScreen Pause = new pauseScreen(this);
-    public UI ui = new UI(this);
-    public finishScreen Finish = new finishScreen(this);
-    public deathScreen Death = new deathScreen(this);
-    public Background background = new Background(this);
-    public dataScreen data = new dataScreen(this);
+    superObject obj[] = new superObject[10];
+    Entity Monsters[] = new Entity[10];
+    objectSetter oSetter = new objectSetter(this);
+    titleScreen Title = new titleScreen(this);
+    pauseScreen Pause = new pauseScreen(this);
+    UI ui = new UI(this);
+    finishScreen Finish = new finishScreen(this);
+    deathScreen Death = new deathScreen(this);
+    Background background = new Background(this);
+    dataScreen data = new dataScreen(this);
 
     //GAMEPANEL PART ----------------------------------------
-    public int gameState; //a volte ritornano
-    public final int playState = 1;
-    public final int pauseState = 2;
-    public final int titleScreen = 3;
-    public final int finishState = 4;
-    public final int deathState = 5;
-    public final int dataState = 6;
+    int gameState;
+    final int playState = 1;
+    final int pauseState = 2;
+    final int titleScreen = 3;
+    final int finishState = 4;
+    final int deathState = 5;
+    final int dataState = 6;
 
     //SELEZIONE LIVELLO
 
@@ -91,7 +91,7 @@ public class gamePanel extends JPanel implements Runnable{
     public static int level3 = 3;
 
     //BULLETS PART
-    public ArrayList<Bullets> bullet = new ArrayList<>();
+    ArrayList<Bullets> bullet = new ArrayList<>();
 
     //FINE PARTE IMPORTANTE PARTICOLARE
     Image image = new ImageIcon(this.getClass().getResource("/icon/image.png")).getImage(); //immagine icona
@@ -111,7 +111,7 @@ public class gamePanel extends JPanel implements Runnable{
         this.addMouseListener(mouseListener); //implementa i clic del mouse
         this.addMouseMotionListener(mouseListener); //implementa i movimenti del mouse
 
-        this.requestFocus();// dovrebbe servire per il mouse ma funziona anche senza dato che c'è setFocusable
+        this.requestFocus();// in teoria funziona anche senza dato che c'è setFocusable
         this.setFocusable(true);
     }
 
@@ -293,7 +293,7 @@ public class gamePanel extends JPanel implements Runnable{
         //drawStart = System.nanoTime(); //debug
         //if(gameState == playState) {
 
-        if(gameState == titleScreen) {//ALTRA COSA DA METTERE IN UI GIURO è LA PROSSIMA COSA CHE FACCIO
+        if(gameState == titleScreen) {
             Title.draw(g2); //chiamiamo il draw di una classe apposta così non facciamo tutto qua
         }
         else if(gameState == dataState) {
@@ -330,7 +330,7 @@ public class gamePanel extends JPanel implements Runnable{
             ui.drawTimer(g2);
             //}
             if (gameState == pauseState) { //PAUSA DA METTERE IN UNA CLASSE APPOSTA SE NO IL GAMEPANEL DIVENTA UN
-                // INFERNO UI
+                // INFERNO
                 //player.setImmunity(60);
                 Pause.draw(g2); //disegno menu di pausa con una classe apposta
             } else if (gameState == finishState) { //se arriva alla porta

@@ -6,7 +6,7 @@ public class dataBaseFile {
     Statement s;
     ResultSet r;
     public dataBaseFile() {
-        //grazie xirgtui per la sub
+        //costruttore inutile
     }
 
     public void openDatabase() {

@@ -14,12 +14,12 @@ public class UI extends Screens{
     BufferedImage lifeImage;
     BufferedImage fireImage;
     int messageCounter = 0;
-    public boolean messageOn = true;
+    boolean messageOn = true;
     int overMessageCounter = 0;
-    public boolean overMessage = false;
+    boolean overMessage = false;
     String message;
-    public DecimalFormat dFormat = new DecimalFormat("#0.00"); //2 decimali al massimo
-    public double playTime = 0;
+    DecimalFormat dFormat = new DecimalFormat("#0.00"); //2 decimali al massimo
+    double playTime = 0;
 
     public UI(gamePanel gp) {
         super(gp);
