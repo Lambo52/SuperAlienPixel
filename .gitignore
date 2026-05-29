@@ -1,9 +1,6 @@
 # Compiled output
 /out/
 
-# Runtime data
-saves.db
-
 # OS generated files
 Thumbs.db
 .DS_Store
