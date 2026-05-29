@@ -1,2 +1,20 @@
-# Project exclude paths
+# Compiled output
 /out/
+
+# Runtime data
+saves.db
+
+# OS generated files
+Thumbs.db
+.DS_Store
+*~
+
+# IntelliJ IDEA
+.idea/*
+!.idea/.gitignore
+*.iml
+
+# Java
+*.class
+*.jar
+!sqlite-jdbc-3.40.0.0.jar
